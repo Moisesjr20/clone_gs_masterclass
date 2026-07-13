@@ -799,7 +799,7 @@ input[name="website"]{position:absolute;left:-9999px;visibility:hidden}
   display:flex;align-items:center;justify-content:space-between;
   gap:24px;flex-wrap:wrap;
 }
-.footer__logo{height:28px;width:auto;opacity:.85}
+.footer__logo{height:72px;width:auto;opacity:.85}
 .footer__legal{
   margin:0;font-size:13px;color:var(--c-text-3);line-height:1.5;
   text-align:center;flex:1;min-width:240px;
