@@ -161,8 +161,16 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      // Sucesso! Redirecionar para grupo do WhatsApp
-      window.location.href = 'https://chat.whatsapp.com/IgqisE1JJOqGXD7QhiJ2dd?s=cl&p=a&ilr=0';
+      // Sucesso! Fechar modal do form e abrir modal de sucesso
+      const formModal = document.getElementById('form-modal');
+      if (formModal) formModal.hidden = true;
+      document.body.classList.remove('modal-open');
+
+      const successModal = document.getElementById('success-modal');
+      if (successModal) {
+        successModal.hidden = false;
+        document.body.classList.add('modal-open');
+      }
     } catch (err) {
       console.error('Form submission error:', err);
       alert('Erro ao conectar. Tente novamente em alguns segundos.');

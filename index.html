@@ -433,6 +433,66 @@
   </div>
 </div>
 
+<!-- ====== MODAL DE SUCESSO ====== -->
+<div class="modal success-modal" id="success-modal" hidden>
+  <div class="modal__backdrop"></div>
+  <div class="modal__dialog success-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="success-title">
+
+    <div class="success-modal__check" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="#fff" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+    </div>
+
+    <h2 id="success-title" class="success-modal__title">Inscrição confirmada!</h2>
+    <p class="success-modal__sub">Falta <strong>um passo</strong>: entre no grupo de WhatsApp pra receber o link da aula, a confirmação e os lembretes. É por lá que tudo acontece.</p>
+
+    <div class="success-modal__info-grid">
+      <div class="success-modal__info-card">
+        <span class="success-modal__info-label">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          DATA E HORÁRIO
+        </span>
+        <strong data-webinar-date>Em breve</strong>
+      </div>
+      <div class="success-modal__info-card">
+        <span class="success-modal__info-label">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          FORMATO
+        </span>
+        <strong>Ao vivo no Google Meet</strong>
+      </div>
+      <div class="success-modal__info-card">
+        <span class="success-modal__info-label">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+          VAGAS
+        </span>
+        <strong>Limitado a 50 pessoas</strong>
+      </div>
+      <div class="success-modal__info-card success-modal__info-card--alert">
+        <span class="success-modal__info-label">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><line x1="4.9" y1="4.9" x2="19.1" y2="19.1"/></svg>
+          REPLAY
+        </span>
+        <strong>Não terá replay</strong>
+      </div>
+    </div>
+
+    <a href="https://chat.whatsapp.com/IgqisE1JJOqGXD7QhiJ2dd?s=cl&p=a&ilr=0"
+       target="_blank" rel="noopener"
+       class="success-modal__wa-btn">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.464 3.488"/></svg>
+      Entrar no grupo do WhatsApp
+    </a>
+
+    <ol class="success-modal__steps">
+      <li><span>1</span><p>Toque no botão acima e <strong>entre no grupo</strong> da aula no WhatsApp.</p></li>
+      <li><span>2</span><p>Deixe as notificações do grupo <strong>ativadas</strong> — o link da sala e os lembretes chegam por lá.</p></li>
+      <li><span>3</span><p>No dia, entre <strong>alguns minutos antes</strong>. São 50 vagas e <strong>não tem replay</strong>.</p></li>
+    </ol>
+
+    <p class="success-modal__footer">Não recebeu nada? Confere também seu e-mail (inclusive spam/promoções).</p>
+  </div>
+</div>
+
 <a href="https://wa.me/5585936180489?text=Oi!%20Quero%20garantir%20minha%20vaga%20na%20aula%20ao%20vivo%20do%20Filtro%20de%20Valor%20Progressivo"
    class="whatsapp-fab"
    target="_blank" rel="noopener"

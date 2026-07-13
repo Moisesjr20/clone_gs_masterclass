@@ -867,6 +867,86 @@ input[name="website"]{position:absolute;left:-9999px;visibility:hidden}
   text-shadow:0 4px 30px rgba(0,0,0,.8);
 }
 
+/* ====== MODAL DE SUCESSO ====== */
+.success-modal__dialog{
+  max-width:480px;width:calc(100% - 32px);
+  background:#13151c;border-radius:20px;
+  padding:36px 28px 28px;
+  display:flex;flex-direction:column;align-items:center;
+  gap:0;text-align:center;
+  max-height:90vh;overflow-y:auto;
+}
+.success-modal__check{
+  width:64px;height:64px;border-radius:50%;
+  background:#1a9e6e;
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:20px;flex-shrink:0;
+}
+.success-modal__title{
+  font-size:clamp(1.5rem,5vw,2rem);font-weight:800;
+  color:#fff;margin-bottom:12px;line-height:1.2;
+}
+.success-modal__sub{
+  font-size:.95rem;color:#aaa;line-height:1.6;
+  margin-bottom:24px;
+}
+.success-modal__sub strong{color:#fff}
+.success-modal__info-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:10px;
+  width:100%;margin-bottom:24px;
+}
+.success-modal__info-card{
+  background:#1c1f2a;border:1px solid rgba(255,255,255,.07);
+  border-radius:12px;padding:14px 14px 12px;
+  text-align:left;display:flex;flex-direction:column;gap:6px;
+}
+.success-modal__info-card--alert{
+  border-color:rgba(255,100,80,.25);background:#1e1815;
+}
+.success-modal__info-label{
+  display:flex;align-items:center;gap:5px;
+  font-size:.65rem;font-weight:600;letter-spacing:.07em;
+  color:#888;text-transform:uppercase;
+}
+.success-modal__info-card strong{
+  font-size:.9rem;color:#fff;font-weight:700;line-height:1.35;
+}
+.success-modal__info-card--alert strong{color:#ff8878}
+.success-modal__wa-btn{
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  width:100%;padding:16px 24px;
+  background:#25d366;color:#fff;
+  font-size:1rem;font-weight:700;border-radius:12px;
+  text-decoration:none;margin-bottom:24px;
+  transition:background .2s,transform .2s;
+}
+.success-modal__wa-btn:hover{background:#1db954;transform:translateY(-2px)}
+.success-modal__steps{
+  list-style:none;padding:0;margin:0 0 20px;
+  display:flex;flex-direction:column;gap:14px;
+  width:100%;text-align:left;
+}
+.success-modal__steps li{
+  display:flex;align-items:flex-start;gap:12px;
+}
+.success-modal__steps li span{
+  flex-shrink:0;width:26px;height:26px;border-radius:50%;
+  border:1px solid rgba(255,255,255,.25);
+  display:flex;align-items:center;justify-content:center;
+  font-size:.75rem;font-weight:700;color:#ccc;margin-top:1px;
+}
+.success-modal__steps li p{
+  font-size:.88rem;color:#aaa;line-height:1.55;margin:0;
+}
+.success-modal__steps li p strong{color:#fff}
+.success-modal__footer{
+  font-size:.75rem;color:#555;margin:0;
+}
+@media(max-width:480px){
+  .success-modal__info-grid{grid-template-columns:1fr}
+  .success-modal__dialog{padding:28px 18px 22px}
+}
+
 /* WhatsApp FAB */
 .whatsapp-fab{
   position:fixed;bottom:24px;right:24px;z-index:100;
