@@ -161,13 +161,8 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      // Sucesso!
-      form.innerHTML = `
-        <div style="text-align:center;padding:32px 16px">
-          <svg viewBox="0 0 24 24" width="56" height="56" fill="none" stroke="#ebd197" stroke-width="2" style="margin-bottom:16px"><circle cx="12" cy="12" r="10"/><polyline points="20 6 9 17 4 12"/></svg>
-          <h3 style="color:#ebd197;margin-bottom:8px">Inscrição confirmada!</h3>
-          <p style="color:#ccc">Fique de olho no seu e-mail e WhatsApp. Vamos te enviar o link da sala em breve.</p>
-        </div>`;
+      // Sucesso! Redirecionar para grupo do WhatsApp
+      window.location.href = 'https://chat.whatsapp.com/IgqisE1JJOqGXD7QhiJ2dd?s=cl&p=a&ilr=0';
     } catch (err) {
       console.error('Form submission error:', err);
       alert('Erro ao conectar. Tente novamente em alguns segundos.');
