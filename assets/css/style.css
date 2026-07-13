@@ -512,7 +512,7 @@ input[name="website"]{position:absolute;left:-9999px;visibility:hidden}
 /* =========== PRÊMIOS DOS MENTORADOS =========== */
 .premios{padding:90px 0;border-top:1px solid var(--c-border)}
 .premios__grid{
-  display:grid;grid-template-columns:repeat(3,1fr);gap:18px;
+  display:grid;grid-template-columns:repeat(2,1fr);gap:18px;
   margin-top:40px;
 }
 .premio{
@@ -642,8 +642,8 @@ input[name="website"]{position:absolute;left:-9999px;visibility:hidden}
   .chave-icons,
   .time-cards,
   .master-pillars,
-  .stats-row,
-  .premios__grid{grid-template-columns:1fr;gap:14px}
+  .stats-row{grid-template-columns:1fr;gap:14px}
+  .premios__grid{grid-template-columns:repeat(2,1fr);gap:14px}
   .garantia__grid{grid-template-columns:1fr;gap:30px;text-align:center}
   .garantia__seal{margin:0 auto}
   .garantia__seal svg{width:200px;height:200px}
