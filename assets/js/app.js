@@ -1,5 +1,5 @@
 /**
- * Form handler — Outsider School / Webinar (aula ao vivo)
+ * Form handler — Grupo Escala e Performance / Webinar (aula ao vivo)
  * Captura UTMs, valida, e submete para /api/apply/
  */
 
