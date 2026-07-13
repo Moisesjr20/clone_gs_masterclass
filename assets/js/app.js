@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
     form.classList.add('form-submitting');
 
     try {
-      const response = await fetch('api/apply/', {
+      const response = await fetch('https://hook.georgesoares.com.br/webhook/webinar1', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -153,19 +153,8 @@ document.addEventListener('DOMContentLoaded', () => {
         body: JSON.stringify(payload),
       });
 
-      const data = await response.json();
-
       if (!response.ok) {
-        // Erro da API
-        if (data.fields) {
-          // Erros de validação do backend
-          Object.entries(data.fields).forEach(([fieldName, message]) => {
-            showFieldError(fieldName, message);
-          });
-        } else {
-          // Erro geral
-          alert(data.error || 'Erro ao submeter. Tente novamente.');
-        }
+        alert('Erro ao submeter. Tente novamente.');
         submitBtn.disabled = false;
         submitBtn.textContent = originalText;
         form.classList.remove('form-submitting');
@@ -173,17 +162,12 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       // Sucesso!
-      if (data.redirect_to) {
-        // Redirecionar para página de obrigado
-        window.location.href = data.redirect_to;
-      } else {
-        // Fallback
-        alert('Inscrição enviada com sucesso!');
-        form.reset();
-        submitBtn.disabled = false;
-        submitBtn.textContent = originalText;
-        form.classList.remove('form-submitting');
-      }
+      form.innerHTML = `
+        <div style="text-align:center;padding:32px 16px">
+          <svg viewBox="0 0 24 24" width="56" height="56" fill="none" stroke="#ebd197" stroke-width="2" style="margin-bottom:16px"><circle cx="12" cy="12" r="10"/><polyline points="20 6 9 17 4 12"/></svg>
+          <h3 style="color:#ebd197;margin-bottom:8px">Inscrição confirmada!</h3>
+          <p style="color:#ccc">Fique de olho no seu e-mail e WhatsApp. Vamos te enviar o link da sala em breve.</p>
+        </div>`;
     } catch (err) {
       console.error('Form submission error:', err);
       alert('Erro ao conectar. Tente novamente em alguns segundos.');
