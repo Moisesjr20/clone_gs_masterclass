@@ -17,9 +17,14 @@ function getUTMParams() {
   };
 }
 
-// Validar email
+// Remove espaços, pontos e vírgulas no fim do email (erro comum de digitação)
+function sanitizeEmail(email) {
+  return email.trim().replace(/[.,\s]+$/, '');
+}
+
+// Valida email: TLD deve conter apenas letras (sem pontos finais, sem caracteres inválidos)
 function isValidEmail(email) {
-  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  return /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/.test(email);
 }
 
 // Validar telefone (mínimo 10 dígitos)
@@ -108,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Coletar dados
     const formData = {
       nome: document.querySelector('[name="nome"]').value.trim(),
-      email: document.querySelector('[name="email"]').value.trim(),
+      email: sanitizeEmail(document.querySelector('[name="email"]').value),
       phone: document.querySelector('[name="phone"]').value.trim(),
       instagram: document.querySelector('[name="instagram"]').value.trim(),
       faturamento_mensal: document.querySelector('[name="faturamento_mensal"]').value.trim(),
