@@ -32,6 +32,12 @@ function isValidPhone(phone) {
   return phone.replace(/\D/g, '').length >= 10;
 }
 
+// Formata para E.164: ≤11 dígitos → Brasil (+55), caso contrário assume DDI já presente
+function formatPhoneE164(phone) {
+  const digits = phone.replace(/\D/g, '');
+  return digits.length <= 11 ? '+55' + digits : '+' + digits;
+}
+
 // Mostrar erro em campo específico
 function showFieldError(fieldName, message) {
   const field = document.querySelector(`[name="${fieldName}"]`);
@@ -131,6 +137,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Limpar erros se passou na validação
     fields.forEach(fieldName => clearFieldError(fieldName));
+
+    // Formatar telefone para E.164 antes de enviar
+    formData.phone = formatPhoneE164(formData.phone);
 
     // Adicionar UTMs
     const utm = getUTMParams();
