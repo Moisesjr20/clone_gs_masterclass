@@ -175,7 +175,7 @@ em{font-style:normal;color:var(--c-blue);font-weight:600}
 }
 .hero__subtitle{
   font-size:clamp(17px,2vw,22px);font-weight:400;line-height:1.45;
-  color:var(--c-text-2);margin:0 0 28px;
+  color:var(--c-text-2);margin:0 0 40px;
 }
 .hero__sub{
   color:var(--c-text-2);font-size:clamp(15px,1.5vw,17px);line-height:1.55;
@@ -1139,9 +1139,9 @@ input[name="website"]{position:absolute;left:-9999px;visibility:hidden}
 .hero__center{position:relative;z-index:1;max-width:840px;margin:0 auto;text-align:center}
 .hero--centered .hero__title{
   font-size:clamp(22px,3.2vw,38px);line-height:1.16;
-  margin:14px auto 26px;max-width:900px;
+  margin:14px auto 18px;max-width:900px;
 }
-.hero--centered .hero__cta{margin:2px 0 26px}
+.hero--centered .hero__cta{margin:0 0 26px}
 .webinar-countdown--center{display:flex;flex-direction:column;align-items:center}
 .webinar-countdown--center #countdown{justify-content:center}
 .hero--centered .hero__bullets{
