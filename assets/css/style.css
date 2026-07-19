@@ -1180,4 +1180,7 @@ body.modal-open{overflow:hidden}
   .modal{padding:12px}
   .modal__dialog .hero-form{padding:26px 20px}
 }
+@media (max-width:768px){
+  .hero--centered .hero__bullets{margin-top:56px}
+}
 
