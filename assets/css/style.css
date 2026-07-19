@@ -1181,6 +1181,9 @@ body.modal-open{overflow:hidden}
   .modal__dialog .hero-form{padding:26px 20px}
 }
 @media (max-width:768px){
-  .hero--centered .hero__bullets{margin-top:56px}
+  .hero--centered{min-height:100svh;display:flex;flex-direction:column;justify-content:flex-start}
+  .hero--centered .hero__center{display:flex;flex-direction:column;flex:1}
+  .hero--centered .webinar-countdown{margin-top:auto;padding-top:40px}
+  .hero--centered .hero__bullets{margin-top:32px}
 }
 
