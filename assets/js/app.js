@@ -88,10 +88,6 @@ function validateForm(formData) {
     errors.instagram = 'Informe seu Instagram';
   }
 
-  if (!formData.faturamento_mensal) {
-    errors.faturamento_mensal = 'Selecione uma faixa de faturamento';
-  }
-
   return errors;
 }
 
@@ -122,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
       email: sanitizeEmail(document.querySelector('[name="email"]').value),
       phone: document.querySelector('[name="phone"]').value.trim(),
       instagram: document.querySelector('[name="instagram"]').value.trim(),
-      faturamento_mensal: document.querySelector('[name="faturamento_mensal"]').value.trim(),
+      faturamento_mensal: '',
     };
 
     // Validar
